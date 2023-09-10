@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $1 == 'push' ]]; then
+    rclone sync /home/cekingx/Documents/obsidian-rclone google-drive:obsidian-rclone -P --dry-run
+elif [[ $1 == 'pull' ]]; then
+    rclone sync google-drive:obsidian-rclone /home/cekingx/Documents/obsidian-rclone -P --dry-run
+else
+    echo 'UNKNOW COMMAND'
+fi
